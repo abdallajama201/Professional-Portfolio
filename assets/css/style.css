@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid black;*/
+
+}
+
+.body {
+    background-color: #E0F7FA;
+}
+
+
+.header {
+    background-color: #006064;
+}
+
+.nav {
+    background-color: #00838F;
+
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.panel {
+    display: none;
+    transition: flex-basis 500ms linear;
+    background-image: url("../images/side-panel.jpg");
+}
+
+.content {
+    flex: 1 0 0;
+    max-width: 100%;
+    transition: flex-basis 500ms linear;
+}
+
+.about-me {
+
+}
+
+.project-top {
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.project {
+    flex: 1 0 100%;
+    transition: flex-basis 500ms linear;
+}
+
+.footer {
+    background-color: #006064;
+}
+
+@media screen and (min-width: 768px) {
+    .project {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .panel {
+        display: flex;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .content {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .project {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+}
