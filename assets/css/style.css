@@ -1,18 +1,24 @@
+/*
+Styling page for 02-Advanced-CSS-Challenge
+Designed to be mobile first and readjust to larger screens
+*/
+/*Styling for color scheme*/
 :root {
     --dark: #247881;
     --medium: #43919B;
     --light: #30AADD;
     --accent: #00FFC6;
-    --margin-padding: 40px;
 }
 
-.body {
-
+/*Styling for the overall page*/
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
-
-.header {
-    background-color: var(--medium);
+/*Styling for header and footer*/
+.header, footer {
+    background: linear-gradient(var(--medium) 0%, var(--light) 100%);
     min-height: 150px;
     font-size: 400%;
     display: flex;
@@ -20,8 +26,9 @@
     justify-content: center;
 }
 
+/*Styling for panel under header*/
 .nav {
-    background-color: var(--dark);
+    background: linear-gradient(var(--dark) 0%, var(--medium) 100%);
     min-height: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -30,6 +37,7 @@
     font-size: 200%;
 }
 
+/*Styling for links in the nav panel*/
 .nav a {
     margin: 5px;
     padding: 5px;
@@ -40,37 +48,39 @@
     align-items: center;
     color: white;
     background-color: var(--medium);
+    text-decoration: none;
 }
 
+/*Styling to change color of links when hovered over*/
+.nav a:hover, .contact a:hover {
+    background-color: var(--dark);
+}
+
+/*Styling for main section to the left of side panel*/
 .main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
 }
 
+/*Styling for side panel*/
+/*Only comes into view if the screen is larger enough*/
 .panel {
     display: none;
-    transition: flex-basis 500ms linear;
-    background-color: var(--accent);
+    background: linear-gradient(var(--accent) 0%, var(--light) 100%);
 }
 
-.content {
-    flex: 1 0 0;
-    max-width: 100%;
-    transition: flex-basis 500ms linear;
-}
-
+/*Styling for styling for about me section*/
 .about-me {
     min-height: 300px;
-    margin: var(--margin-padding);
-    padding: var(--margin-padding);
+    margin: 40px;
+    padding: 40px;
     border: solid var(--light) 5px;
     background-image: url(../images/water-1.jpg);
     background-size: 100%;
-
 }
 
+/*Styling for Styling for body text in about me*/
 .about-me p {
     font-size: 125%;
     color: white;
@@ -79,29 +89,27 @@
     margin-right: 20px;
 }
 
-.about-me:hover {
+/*Styling that produces glow when mouse hovers on sections*/
+.about-me:hover,.project-top:hover, .container:hover, .project:hover, .contact:hover {
     box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
-
 }
 
+/*Styling for highlighted project*/
 .project-top {
     min-height: 300px;
-    margin: var(--margin-padding);
-    padding: var(--margin-padding);
+    margin: 40px;
+    padding: 40px;
     border: solid var(--light) 5px;
     background-image: url("../images/coding-photo-1.jpg");
     background-size: 100%;
 }
 
-.project-top:hover {
-    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
-}
-
+/*Styling for section containg other projects*/
 .container {
     min-height: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin: var(--margin-padding);
+    margin: 40px;
     padding: 20px;
     border: solid var(--light) 5px;
     min-height: fit-content;
@@ -110,28 +118,20 @@
     background-color: var(--medium);
 }
 
-.container:hover {
-    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
-}
-
+/*Styling for styling for the individual small projects*/
 .project {
     flex: 1 0 100%;
-    transition: flex-basis 500ms linear;
     margin: 20px;
     border: solid var(--light) 5px;
     min-height: 200px;
     min-width: 45%;
-    
 }
 
-.project:hover {
-    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
-}
-
+/*Styling for contact section*/
 .contact {
     min-height: 300px;
-    margin: var(--margin-padding);
-    padding: var(--margin-padding);
+    margin: 40px;
+    padding: 40px;
     border: solid var(--light) 5px;
     background-image: url("../images/mail-photo-1.jpg");
     background-size: 100%;
@@ -141,13 +141,11 @@
     justify-content: center;
 }
 
-.contact:hover {
-    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
-}
-
+/*Styling for contact links*/
 .contact a {
     margin: 5px;
     padding: 5px;
+    min-width: fit-content;
     border: solid 5px var(--accent);
     flex: 1 0 60%;
     display: flex;
@@ -156,23 +154,21 @@
     color: white;
     font-size: 200%;
     background-color: var(--medium);
+    text-decoration: none;
 }
 
-.footer {
-    background-color: var(--medium);
-    min-height: 100px;
-}
-
+/*Styling for the title at the top of the page*/
 #title {
     border: var(--accent) solid 5px;
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
-
+    color: white;
 }
 
+/*Styling for the title of each section*/
 #sub-title {
-    max-width: 300px;
+    max-width: 400px;
     min-height: 50px;
     margin-left: 10px;
     margin-top: 10px;
@@ -184,10 +180,11 @@
     align-items: center;
 }
 
+/*Styling for side portrait*/
 #portrait {
     max-width: 200px;
     max-height: 200px;
-    border: solid 5px var(--light);
+    border: solid 5px white;
     outline: solid 10px var(--medium);
     border-radius: 50%;
     margin-left: auto;
@@ -195,6 +192,7 @@
     margin-top: 50px;
 }
 
+/*Sets a seperate background picture for each project*/
 #project-1 {
     background-image: url("../images/coding-photo-2.jpg");
     background-size: 100%;
@@ -215,6 +213,7 @@
     background-size: 100%;
 }
 
+/*Sets the size of the link to be larger enough to be clickabe on most of the image*/
 #transparent-link {
     position: absolute;
     min-width: 400px;
@@ -227,6 +226,7 @@
     min-height: 125px;
 }
 
+/*Resets size of certain elements when screen grows larger*/
 @media screen and (min-width: 768px) {
     .about-me p {
         font-size: 125%;
@@ -256,6 +256,7 @@
     }
 }
 
+/*Resets size of certain elements when screen grows larger*/
 @media screen and (min-width: 992px) {
     .panel {
         display: flex;
@@ -273,26 +274,21 @@
         flex: 0 0 80%;
         max-width: 80%;
     }
+    
 
     .project {
       flex: 0 0 25%;
       max-width: 25%;
     }
 
-    .nav a {
-        flex: 0 0 15%;
-        max-width: 15%;
-    }
-
-    .contact a {
+    .nav a, .contact a {
         flex: 0 0 15%;
         max-width: 15%;
     }
 
     #transparent-link {
         position: absolute;
-        min-width: 1200px;
+        min-width: 1100px;
         min-height: 250px;
     }
-
 }
