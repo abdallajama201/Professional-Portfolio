@@ -24,8 +24,22 @@
     background-color: var(--dark);
     min-height: 100px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-size: 200%;
+}
+
+.nav a {
+    margin: 5px;
+    padding: 5px;
+    border: solid 5px var(--accent);
+    flex: 1 0 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--medium);
 }
 
 .main {
@@ -57,6 +71,19 @@
 
 }
 
+.about-me p {
+    font-size: 125%;
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-me:hover {
+    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
+
+}
+
 .project-top {
     min-height: 300px;
     margin: var(--margin-padding);
@@ -64,6 +91,10 @@
     border: solid var(--light) 5px;
     background-image: url("../images/coding-photo-1.jpg");
     background-size: 100%;
+}
+
+.project-top:hover {
+    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
 }
 
 .container {
@@ -79,6 +110,10 @@
     background-color: var(--medium);
 }
 
+.container:hover {
+    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
+}
+
 .project {
     flex: 1 0 100%;
     transition: flex-basis 500ms linear;
@@ -86,6 +121,11 @@
     border: solid var(--light) 5px;
     min-height: 200px;
     min-width: 45%;
+    
+}
+
+.project:hover {
+    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
 }
 
 .contact {
@@ -95,6 +135,27 @@
     border: solid var(--light) 5px;
     background-image: url("../images/mail-photo-1.jpg");
     background-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact:hover {
+    box-shadow: inset 0px 0px 8px var(--accent), 0 0 15px var(--accent);
+}
+
+.contact a {
+    margin: 5px;
+    padding: 5px;
+    border: solid 5px var(--accent);
+    flex: 1 0 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    background-color: var(--medium);
 }
 
 .footer {
@@ -115,8 +176,8 @@
     min-height: 50px;
     margin-left: 10px;
     margin-top: 10px;
-    background-color: var(--accent);
-    color: var(--light);
+    background-color: var(--dark);
+    color: white;
     font-size: 200%;
     display: flex;
     justify-content: center;
@@ -154,10 +215,44 @@
     background-size: 100%;
 }
 
+#transparent-link {
+    position: absolute;
+    min-width: 400px;
+    min-height: 200px;
+}
+
+#transparent-link-small {
+    position: absolute;
+    min-width: 500px;
+    min-height: 125px;
+}
+
 @media screen and (min-width: 768px) {
+    .about-me p {
+        font-size: 125%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
     .project {
       flex: 0 0 50%;
       max-width: 50%;
+    }
+
+    .nav a {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .contact a {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    #transparent-link {
+        position: absolute;
+        min-width: 800px;
+        min-height: 200px;
     }
 }
 
@@ -166,6 +261,12 @@
         display: flex;
         flex: 0 0 20%;
         max-width: 20%;
+    }
+
+    .about-me p {
+        font-size: 125%;
+        margin-left: 80px;
+        margin-right: 80px;
     }
 
     .content {
@@ -177,4 +278,21 @@
       flex: 0 0 25%;
       max-width: 25%;
     }
+
+    .nav a {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    .contact a {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    #transparent-link {
+        position: absolute;
+        min-width: 1200px;
+        min-height: 250px;
+    }
+
 }
