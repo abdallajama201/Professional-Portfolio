@@ -1,22 +1,31 @@
-* {
-    margin: 0;
-    padding: 0;
-    /*border: 1px solid black;*/
-
+:root {
+    --dark: #247881;
+    --medium: #43919B;
+    --light: #30AADD;
+    --accent: #00FFC6;
+    --margin-padding: 40px;
 }
 
 .body {
-    background-color: #E0F7FA;
+
 }
 
 
 .header {
-    background-color: #006064;
+    background-color: var(--medium);
+    min-height: 150px;
+    font-size: 400%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav {
-    background-color: #00838F;
-
+    background-color: var(--dark);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
@@ -29,7 +38,7 @@
 .panel {
     display: none;
     transition: flex-basis 500ms linear;
-    background-image: url("../images/side-panel.jpg");
+    background-color: var(--accent);
 }
 
 .content {
@@ -39,26 +48,110 @@
 }
 
 .about-me {
+    min-height: 300px;
+    margin: var(--margin-padding);
+    padding: var(--margin-padding);
+    border: solid var(--light) 5px;
+    background-image: url(../images/water-1.jpg);
+    background-size: 100%;
 
 }
 
 .project-top {
-
+    min-height: 300px;
+    margin: var(--margin-padding);
+    padding: var(--margin-padding);
+    border: solid var(--light) 5px;
+    background-image: url("../images/coding-photo-1.jpg");
+    background-size: 100%;
 }
 
 .container {
+    min-height: 300px;
     display: flex;
     flex-wrap: wrap;
-
+    margin: var(--margin-padding);
+    padding: 20px;
+    border: solid var(--light) 5px;
+    min-height: fit-content;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--medium);
 }
 
 .project {
     flex: 1 0 100%;
     transition: flex-basis 500ms linear;
+    margin: 20px;
+    border: solid var(--light) 5px;
+    min-height: 200px;
+    min-width: 45%;
+}
+
+.contact {
+    min-height: 300px;
+    margin: var(--margin-padding);
+    padding: var(--margin-padding);
+    border: solid var(--light) 5px;
+    background-image: url("../images/mail-photo-1.jpg");
+    background-size: 100%;
 }
 
 .footer {
-    background-color: #006064;
+    background-color: var(--medium);
+    min-height: 100px;
+}
+
+#title {
+    border: var(--accent) solid 5px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+#sub-title {
+    max-width: 300px;
+    min-height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: var(--accent);
+    color: var(--light);
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portrait {
+    max-width: 200px;
+    max-height: 200px;
+    border: solid 5px var(--light);
+    outline: solid 10px var(--medium);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#project-1 {
+    background-image: url("../images/coding-photo-2.jpg");
+    background-size: 100%;
+}
+
+#project-2 {
+    background-image: url("../images/coding-photo-3.jpg");
+    background-size: 100%;
+}
+
+#project-3 {
+    background-image: url("../images/coding-photo-4.jpg");
+    background-size: 100%;
+}
+
+#project-4 {
+    background-image: url("../images/coding-photo-5.jpg");
+    background-size: 100%;
 }
 
 @media screen and (min-width: 768px) {
