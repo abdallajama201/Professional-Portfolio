@@ -12,7 +12,7 @@ This project is a single webpage that is a portfolio of my work. The purpose of 
 
 ## Usage
 
-The website is live on the open web and can be accessed at https://abdallajama201.github.io/Challenge-02-Advanced-CSS/
+The website is live on the open web and can be accessed at https://abdallajama201.github.io/Professional-Portfolio/
 
 A photo of the page is available below
 
