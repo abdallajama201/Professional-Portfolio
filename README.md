@@ -1,4 +1,4 @@
-# 02 Advanced CSS Challenge: Professional Portfolio
+# Professional Portfolio
 
 ## Description
 
